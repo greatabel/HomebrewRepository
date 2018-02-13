@@ -6,11 +6,11 @@ def main():
     d = list(config.WuXing.items())
 
     for i in range(len(d)):
-        if i != len(d)-1:
-            print(d[i], '->生->', d[i+1])
-        else:
-            print(d[i], '->生->', d[0])
+        print(d[i], '->生->', d[(i+1)%len(d)])
 
+
+    for i in range(len(d)):
+        print(d[i], '->克->', d[(i+2)%len(d)])
 
 if __name__ == '__main__':
     main()
